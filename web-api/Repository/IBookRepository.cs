@@ -14,5 +14,7 @@ namespace web_api.Repository
         Task<int> CreateBook(CreateBookDto model);
 
         Task<bool> UpdateBook(int id, UpdateBookDto model);
+
+        Task<bool> RemoveBook(int id);
     }
 }

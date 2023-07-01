@@ -75,5 +75,22 @@ namespace web_api.Repository
 
         }
 
+
+        public async Task<bool> RemoveBook(int id)
+        {
+            // var book = new Book() {Id = id};
+            // _context.Books.Remove(book);
+            // await _context.SaveChangesAsync();
+            var book = await _context.Books.Where(x => x.Id == id).FirstOrDefaultAsync();
+            if (book != null)
+            {
+                _context.Books.Remove(book);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+
+            return false;
+        }
+
     }
 }

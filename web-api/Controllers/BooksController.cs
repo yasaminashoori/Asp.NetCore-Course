@@ -47,11 +47,28 @@ namespace web_api.Controllers
             var id = await _booksRepository.CreateBook(model);
             return Ok(id);
         }
+        
 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateBook([FromBody]UpdateBookDto model, int id)
         {
             var result = await _booksRepository.UpdateBook(id, model);
+            if (!result)
+            {
+                return BadRequest("This Book is not exist");
+            }
+            return Ok(result);
+        }
+
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> RemoveBook(int id)
+        {
+            var result = await _booksRepository.RemoveBook(id);
+            if (!result)
+            {
+                return BadRequest("This Book is not exist");
+            }
             return Ok(result);
         }
 
