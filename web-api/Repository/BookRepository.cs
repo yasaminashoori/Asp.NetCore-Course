@@ -19,13 +19,14 @@ namespace web_api.Repository
 
         public async Task<List<BookDetailsDto>> GetAllBooks()
         {
-            var books = await _context.Books.Select(x => new BookDetailsDto()
-            {
-                Id = x.Id,
-                Amount = x.Amount,
-                Description = x.Description,
-                Title = x.Title
-            }).ToListAsync();
+            var books = await _context.Books
+                            .Select(x => new BookDetailsDto()
+                            {
+                                Id = x.Id,
+                                Amount = x.Amount,
+                                Description = x.Description,
+                                Title = x.Title
+                            }).ToListAsync();
             return books;
         }
 
@@ -41,5 +42,19 @@ namespace web_api.Repository
                                     }).FirstOrDefaultAsync();
             return book;
         }
+
+        public async Task<int> CreateBook(CreateBookDto model)
+        {
+            var book = new Book(){
+                Amount = model.Amount,
+                Description = model.Description,
+                Title = model.Title,
+            };
+
+            _context.Books.Add(book);
+            await _context.SaveChangesAsync();
+            return book.Id;
+        }
+
     }
 }

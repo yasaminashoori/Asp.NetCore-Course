@@ -10,5 +10,7 @@ namespace web_api.Repository
         Task<List<BookDetailsDto>> GetAllBooks();
 
         Task<BookDetailsDto> GetBookDetailsById(int id);
+
+        Task<int> CreateBook(CreateBookDto model);
     }
 }

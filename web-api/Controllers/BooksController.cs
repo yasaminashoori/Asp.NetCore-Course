@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using web_api.Models;
 using web_api.Repository;
 
 namespace web_api.Controllers
@@ -37,6 +38,14 @@ namespace web_api.Controllers
         {
             var book = await _booksRepository.GetBookDetailsById(id);
             return Ok(book);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> CreateBook([FromBody]CreateBookDto model)
+        {
+            var id = await _booksRepository.CreateBook(model);
+            return Ok(id);
         }
 
     }
