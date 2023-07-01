@@ -48,5 +48,12 @@ namespace web_api.Controllers
             return Ok(id);
         }
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateBook([FromBody]UpdateBookDto model, int id)
+        {
+            var result = await _booksRepository.UpdateBook(id, model);
+            return Ok(result);
+        }
+
     }
 }

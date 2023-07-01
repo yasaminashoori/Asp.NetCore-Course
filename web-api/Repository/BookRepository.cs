@@ -45,7 +45,8 @@ namespace web_api.Repository
 
         public async Task<int> CreateBook(CreateBookDto model)
         {
-            var book = new Book(){
+            var book = new Book()
+            {
                 Amount = model.Amount,
                 Description = model.Description,
                 Title = model.Title,
@@ -54,6 +55,24 @@ namespace web_api.Repository
             _context.Books.Add(book);
             await _context.SaveChangesAsync();
             return book.Id;
+        }
+
+        public async Task<bool> UpdateBook(int id, UpdateBookDto model)
+        {
+            var book = await _context.Books.Where(x => x.Id == id).FirstOrDefaultAsync();
+
+            if (book != null)
+            {
+                // _context.Books.Update(book);
+                book.Title = model.Title;
+                book.Amount = model.Amount;
+                book.Description = model.Description;
+                await _context.SaveChangesAsync();
+                return true;
+            }
+
+            return false;
+
         }
 
     }
