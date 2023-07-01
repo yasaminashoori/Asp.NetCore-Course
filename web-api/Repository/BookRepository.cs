@@ -28,5 +28,18 @@ namespace web_api.Repository
             }).ToListAsync();
             return books;
         }
+
+        public async Task<BookDetailsDto> GetBookDetailsById(int id)
+        {
+            var book = await _context.Books.Where(x => x.Id == id)
+                                    .Select(x => new BookDetailsDto()
+                                    {
+                                        Id = x.Id,
+                                        Amount = x.Amount,
+                                        Description = x.Description,
+                                        Title = x.Title
+                                    }).FirstOrDefaultAsync();
+            return book;
+        }
     }
 }

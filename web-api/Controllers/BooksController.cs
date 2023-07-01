@@ -31,5 +31,13 @@ namespace web_api.Controllers
             return Ok(books);
         }
 
+        //Route: /api/Books{id}
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetBookDetailsById(int id)
+        {
+            var book = await _booksRepository.GetBookDetailsById(id);
+            return Ok(book);
+        }
+
     }
 }

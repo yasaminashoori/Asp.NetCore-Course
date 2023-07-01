@@ -8,5 +8,7 @@ namespace web_api.Repository
     public interface IBookRepository
     {
         Task<List<BookDetailsDto>> GetAllBooks();
+
+        Task<BookDetailsDto> GetBookDetailsById(int id);
     }
 }
