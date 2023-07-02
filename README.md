@@ -7,9 +7,11 @@ Blogs:
 # <a href="">Notes of Course</a>
 In this link you will find the notes within the course.
 
-# Article on Building Web APIs with ASP .NET Core
+# Article on Building Web APIs with ASP .NET Core Book
 
+What is Web API? and why we need to learn it? 
 
+Let's start with Data.
 
 
 
