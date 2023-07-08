@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
 
@@ -11,9 +12,9 @@ namespace migrate_to_asp_net
             CreateHostBuilder(args).Build().Run();
         }
 
-        public IHostBuilder CreateHostBuilder(string[] args)
+        public static IHostBuilder CreateHostBuilder(string[] args)
         {
-            return Host.CreateDefaultBuilder(args).ConfigureWebHostDeafaults(webHost =>
+            return Host.CreateDefaultBuilder(args).ConfigureWebHostDefaults(webHost =>
             {
                 webHost.UseStartup<StartUp>();
             });
