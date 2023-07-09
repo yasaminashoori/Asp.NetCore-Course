@@ -42,7 +42,7 @@ Body: the request should contain data such as the book's info we want to update.
 Data: Other info except for Body, such as images etc.
 
 
-HTTP Response:
+# HTTP Response:
 
 Status code: 5 Category: 1xx, 2xx, 3xx, 4xx, 5xx.
 
@@ -55,6 +55,8 @@ Status code: 5 Category: 1xx, 2xx, 3xx, 4xx, 5xx.
 4xx: Client Error
 
 5xx: Server Error
+
+---------------------------
 
 200: ok
 
