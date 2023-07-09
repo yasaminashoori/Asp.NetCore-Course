@@ -11,17 +11,23 @@ namespace migrate_to_asp_net
         public void ConfigureServices(IServiceCollection services)
         {
 
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            env.UseRouting();
+            app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    await Context.Response.WriteAsync("Hello from my API");
+                    await context.Response.WriteAsync("Hello from my API");
+                });
+
+                endpoints.MapGet("/start", async context =>
+                {
+                    await context.Response.WriteAsync("Start a new endpoint");
                 });
             });
         }
