@@ -17,20 +17,7 @@ namespace migrate_to_asp_net
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.Use(async (context, next) => {
-                await context.Response.WriteAsync("MiddleWare with USE 1\n");
-                await next();
-                await context.Response.WriteAsync("MiddleWare with USE 2\n");
-            });
-            app.Map("/yas", CustomCode);
-
-            app.UseMiddleware<CustomMiddleware>();
-
-            app.Run(async context => {
-                await context.Response.WriteAsync("MiddleWare with RUN\n");
-            });
-
-
+           
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -42,14 +29,6 @@ namespace migrate_to_asp_net
             {
                 endpoints.MapControllers();
 
-            });
-        }
-
-        private void CustomCode(IApplicationBuilder app)
-        {
-            app.Use(async (context, next) =>
-            {
-                await context.Response.WriteAsync("MiddleWare from custom yas\n");
             });
         }
     }
