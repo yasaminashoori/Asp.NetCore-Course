@@ -110,16 +110,34 @@ this is the runner file of the project, main file of program and runs the host. 
 
 - NOTE: the main file that starts the project is Controller folder and WeatherForcastController file.
 
-- How to run the project: with dotnet restore we will install the packages  and the dotnet build tha starts the build and compiling to find the possible errors (restore automatic made dll file) and dotnet run for running the program.
+- How to run the project: with dotnet restore we will install the packages  and the dotnet build tha starts the build and compiling to find the possible errors (restore automatic made dll file) and dotnet run for running the program (it get build automatically).
 
 - When you open the host you see 404 error it happens cause there is nothing in the root of our project and the controllers are in the weatherforcast file so we add /weatherforcast at the end of the url.
 
-7. Swagger: there is an standard called "Open API Specification" that doesn't restrict to the language and almost all of them work base on it. means "Language-agnostic programming". for ducomenting, using postman and where do you want to have a client taht undrestands your API dynamically and what methods you have: POST, GET and when you write your API in this standard the Open API finds out and writing the docs for everyone. and one of the clients that is based on Open API and designes a client GUI for us is "Swagger". and write from your API a SDK in every language, specifies the route, request and etc. so both requesting and documenting handles.
+7. Swagger: there is an standard called "Open API Specification" that doesn't restrict to the language and almost all of them work base on it. means "Language-agnostic programming". for ducomenting, using postman and where do you want to have a client taht undrestands your API dynamically and what methods you have: POST, GET and when you write your API in this standard the Open API finds out and writing the docs for everyone. and one of the clients that is based on Open API and designes a client GUI for us is "Swagger". and write from your API a SDK in every language, specifies the route, request and etc. so both requesting and documenting handles and front wil use it.
 
 - Why we use it? you saw before we have a get method weatherforcast that generates summary randomly but we didn't find out the route of the project and we had to open it by /weatherforcast in the browser or postman.
 
-- How use it> in the .NET we have Nuget package manager and inside of it we have swashbuckle that enables us to access swagger in the .NET projects.
- 
+- How use it> in the .NET we have Nuget package manager and inside of it we have swashbuckle that enables us to access swagger in the .NET projects. with this command add it to our project in vs code: dotnet add package Swashbuckle.AspNetCore
+If you look in the cs proj file you will see swashbuckle add to your project in itemgroup.
+go to the startup file: rwo main parts configuration (add services) and configureservices (add application, middlewares). and add /swagger to access it.
+
+8. Contents of project: 
+- properties: there is a file named launchSettings.json that json is a key-values of objects.
+we have a setting for launching the project it means what profiles we should read from to launch.
+1. IIS Express: the former .NET web server that only worked on windows. (for .NET Framework).
+2. when .NET Core introduced it was suggest a new web server named: Kestrel that was lightweight, cross-platform.
+But after all what is web server? when a http request from outside sends to our application, the first where that it hits is the app's web server that in .NET Core by default is Kestrel will be processed and convert to HTTPCONTEXT and sends it to app. but in the production enviroment we should put front of web server a reverse proxy server too, it is a shelter to get the requests at first and then send it to kestrel the famous ones are IIS, Apache, Nginx (even time options to prevent from downing the server or DDOS).
+
+- Environment variables: the variables that sets at the top of your app and can be used all over the app. usage is for saving the configs and settings as environment variables and famous one is "ASPNETCORE ENVIRONMENT".
+What is the environment: 1.Development(local IP, host the app in locaal systetm) 2.Staging(before step 3, test the app on the server rfor fixing the bugs in the same as envronment as production, load tst, stress test) 3.Production(end user).
+
+- Swagger used in development step.
+
+- iisSetting used for iis profile.
+
+- appsetting.json and appsettings.development.json: the number two is settigns of run time when run the app till app is opens. these settings aren't for launch time but run time. we have different log levels  
+
 # Intro to Databasse and PostgreSQL
 
 
