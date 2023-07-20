@@ -8,7 +8,6 @@ in the past there were based on or SSA(Asp .NET MVC, Laravel, PHP, Node.js, word
 2. Web API is not a tool but a concept! that works with HTTP Protocol. And when we say API, another concept comes too: Rest (Representational Estate Transfer) and known as RestFul API (Every kan has it's own rest api).
 
 3. When we talked about API another concept comes along named: REST that the apps will be RESTFUL>
-
 RestFul Rules:
 1. URL Structure
 2. Separation between client and server. (Independent for kind of language)
@@ -21,7 +20,7 @@ Hyper Text Transfer Protocol is a protocol that sends us from client to server a
 - URL(link address)
 - HTTP Method(verb)
 - Header(one or many)
-- Body
+- Body(the informations like type of http put, get and etc should be written in this part)
 - Data 
 
 2. From Server to Client => Response
@@ -36,55 +35,32 @@ PUT: Update the Data of item.
 PATCH: Update just a part of the data (partial data).
 DELETE: delete an item in DB.
 
+- Request:
 Header: not the primary data and main resuest. generic ones, like IP and location.
-
 Body: the request should contain data such as the book's info we want to update.
-
 Data: Other info except for Body, such as images etc.
 
-
 # HTTP Response:
-
 Status code: 5 Category: 1xx, 2xx, 3xx, 4xx, 5xx.
-
 1xx: informational response.
-
 2xx: successful
-
 3xx: Redirection
-
 4xx: Client Error
-
 5xx: Server Error
-
 ---------------------------
-
 200: ok
-
 201: created- create the object in the server ( POST )
-
 204: no content - usually, ok but nothing returns
-
 301: Moved permanently 
-
-302: moved temp
-
+302: moved temporarily
 400: Bad request - client body error. the request has a problem. 
-
 401: Unauthorized token or not working. (no access)
-
 403: Forbidden - valid token or you don't have access in this level (location not allowed)
-
 404: not found: in the server so the client understands or a route has a problem and is not found
-
 405: Method  not Allowed - when a method verb is wrong it should be POST but You send Get.
-
-500: all errors in our server, and internal server errors. unhandled exception, or crashed! or bug. (dangerous)
-
-503: Service unavailable. don't service
-
+500: all errors in our server, and internal server errors. unhandled exception, or crashed! or bug (dangerous).
+503: Service unavailable(Update or etc for google). srvice doesn't work and called: server downs!
 504: getaway time out, the process takes so much long related to the server.
-
 
 # Intro to Databasse and PostgreSQL
 
