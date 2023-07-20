@@ -5,15 +5,17 @@ in the past there were based on or SSA(Asp .NET MVC, Laravel, PHP, Node.js, word
 
 - the front and back of the site connect to each other with API (between Backend and Frontend). So Web API is made without duplicating the Business Logic, and various clients connect to the server. Web API help us that just once we set security settings and other Database operations: Desktop, mobile, and web apps can request their resources with this API.
 
-- Web API is not a tool but a concept! that works with HTTP Protocol. And when we say API, another concept comes too: Rest (Representational Estate Transfer) and known as RestFul API (Every kan has it's own rest api).
+2. Web API is not a tool but a concept! that works with HTTP Protocol. And when we say API, another concept comes too: Rest (Representational Estate Transfer) and known as RestFul API (Every kan has it's own rest api).
+
+3. When we talked about API another concept comes along named: REST that the apps will be RESTFUL>
 
 RestFul Rules:
 1. URL Structure
 2. Separation between client and server. (Independent for kind of language)
-3. Stateless(client state, or server no need to know)
+3. Stateless(client state, or server no need to know the state such as login, logout and etc.)
 4. HTTP Verb (POST, PUT, GET, PATCH, DELETE)
 
-What is HTTP Request? 
+4. What is HTTP Request? 
 Hyper Text Transfer Protocol is a protocol that sends us from client to server and connects these together.
 From Client to Server => Request ( URL(link address), HTTP Method(verb), Header(one or many), Body, Data )
 From Server to Client => Response (Status Code, Response Header, Data)
