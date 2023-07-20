@@ -5,9 +5,7 @@ in the past there were based on or SSA(Asp .NET MVC, Laravel, PHP, Node.js, word
 
 - the front and back of the site connect to each other with API (between Backend and Frontend). So Web API is made without duplicating the Business Logic, and various clients connect to the server. Web API help us that just once we set security settings and other Database operations: Desktop, mobile, and web apps can request their resources with this API.
 
-- Web API is not a tool but a concept! that works with HTTP Protocol. And when we say API, another concept comes too: Rest (Representational 
-
-- Estate Transfer) and known as RestFul API (Every kan has it's own rest api).
+- Web API is not a tool but a concept! that works with HTTP Protocol. And when we say API, another concept comes too: Rest (Representational Estate Transfer) and known as RestFul API (Every kan has it's own rest api).
 
 RestFul Rules:
 1. URL Structure
