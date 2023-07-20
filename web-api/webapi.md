@@ -16,23 +16,27 @@ RestFul Rules:
 4. HTTP Verb (POST, PUT, GET, PATCH, DELETE)
 
 4. What is HTTP Request? 
-Hyper Text Transfer Protocol is a protocol that sends us from client to server and connects these together.
-From Client to Server => Request ( URL(link address), HTTP Method(verb), Header(one or many), Body, Data )
-From Server to Client => Response (Status Code, Response Header, Data)
+Hyper Text Transfer Protocol is a protocol that sends us from client to server and connects these together. 
+1. From Client to Server => Request 
+- URL(link address)
+- HTTP Method(verb)
+- Header(one or many)
+- Body
+- Data 
 
-HTTP Verb: 
+2. From Server to Client => Response
+- Status Code
+- Response Header (one or many)
+- Data
 
+- web API works based on this protocol: HTTP Verb
 GET: Just read sth from DB and send it to the client.
-
-POST: Create an item in Db or Write it (didn't exist).
-
-PUT: Update the Data.
-
+POST: Create an item in Db or Write it (didn't exist before).
+PUT: Update the Data of item.
 PATCH: Update just a part of the data (partial data).
-
 DELETE: delete an item in DB.
 
-Header: not the primary data. generics like IP, Location
+Header: not the primary data and main resuest. generic ones, like IP and location.
 
 Body: the request should contain data such as the book's info we want to update.
 
