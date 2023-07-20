@@ -81,6 +81,45 @@ Status code: 5 Category: 1xx, 2xx, 3xx, 4xx, 5xx.
 
 504: getaway time out, the process takes so much long related to the server.
 
+5. What do we need? 
+
+- IDE (vs code, visual studio, rider)
+
+- .NET
+
+- Postman
+
+- Database: PostgreSQL and a client to connect with databse (RDBMS) in this case called PGADMMIN (for postgresql and Datagrip for postgre too) that is a GUI to connect with Databse.
+
+6. First project 
+we can build the project with this command: dotnet new webapi -f netcoreapp3.1
+
+Contents:
+- bin and obj folders used for compile, build and running the project. when you build it you gather the link files in obj and make dll (exe) final file in the bin folder. and the project comes up with these dlls. 
+
+- Controllers folder: 
+actions and the weather sample project.
+
+- cs proj
+there is where we installed the libraries and nuget packages (nuget is equal for npm in Javascript) and we call the all of the packages in .NET nuget package (kind of package manager) and it will be shown in the cs proj and it's like package json in js projects.
+
+- Program.cs
+this is the runner file of the project, main file of program and runs the host. uses from startup file (where you add the configs)
+
+- Weatherforcast.cs that contents the classes.
+
+- NOTE: the main file that starts the project is Controller folder and WeatherForcastController file.
+
+- How to run the project: with dotnet restore we will install the packages  and the dotnet build tha starts the build and compiling to find the possible errors (restore automatic made dll file) and dotnet run for running the program.
+
+- When you open the host you see 404 error it happens cause there is nothing in the root of our project and the controllers are in the weatherforcast file so we add /weatherforcast at the end of the url.
+
+7. Swagger: there is an standard called "Open API Specification" that doesn't restrict to the language and almost all of them work base on it. means "Language-agnostic programming". for ducomenting, using postman and where do you want to have a client taht undrestands your API dynamically and what methods you have: POST, GET and when you write your API in this standard the Open API finds out and writing the docs for everyone. and one of the clients that is based on Open API and designes a client GUI for us is "Swagger". and write from your API a SDK in every language, specifies the route, request and etc. so both requesting and documenting handles.
+
+- Why we use it? you saw before we have a get method weatherforcast that generates summary randomly but we didn't find out the route of the project and we had to open it by /weatherforcast in the browser or postman.
+
+- How use it> in the .NET we have Nuget package manager and inside of it we have swashbuckle that enables us to access swagger in the .NET projects.
+ 
 # Intro to Databasse and PostgreSQL
 
 
