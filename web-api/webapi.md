@@ -1,16 +1,9 @@
 1. What is Backend?
 
 - Every app on the web has two parts: front and back. the front is based on SPA that supported by famous frameworks like Vue, Angular, React. but 
+in the past there were based on or SSA(Asp .NET MVC, Laravel, PHP, Node.js, wordpress) it used to supporte both backend and frontend side, for every request from the server front will be made too.
 
-- in the past there were based on or SSA(Asp .NET MVC, Laravel, PHP, Node.js, wordpress) it used to supporte both backend and frontend side, for 
-
-- every request from the server front will be made too.
-
-- the front and back of the site connect to each other with API (between Backend and Frontend). So Web API is made without duplicating the - -
-
-- Business Logic, and various clients connect to the server. Web API help us that just once we set security settings and other Database operations 
-
-- Desktop, mobile, and web apps can request their resources with this API.
+- the front and back of the site connect to each other with API (between Backend and Frontend). So Web API is made without duplicating the Business Logic, and various clients connect to the server. Web API help us that just once we set security settings and other Database operations: Desktop, mobile, and web apps can request their resources with this API.
 
 - Web API is not a tool but a concept! that works with HTTP Protocol. And when we say API, another concept comes too: Rest (Representational 
 
