@@ -7,7 +7,7 @@ in the past there were based on or SSA(Asp .NET MVC, Laravel, PHP, Node.js, word
 
 2. Web API is not a tool but a concept! that works with HTTP Protocol. And when we say API, another concept comes too: Rest (Representational Estate Transfer) and known as RestFul API (Every kan has it's own rest api).
 
-3. When we talked about API another concept comes along named: REST that the apps will be RESTFUL>
+3. When we talked about API another concept comes along named: REST that the apps will be RESTFUL.
 RestFul Rules:
 1. URL Structure
 2. Separation between client and server. (Independent for kind of language)
