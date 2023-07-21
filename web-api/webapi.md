@@ -186,6 +186,15 @@ if we don't have the rout[] at the top we have to in all of the routes add them 
 
 - Query string/param way: we used http method get, but we can send some strings in form of query to the request not by variables that we did .before. if we get it as parameters to the method makes query strings : get-all-books?List=2500&listName=test
 
+# Season 2: Getting started with Asp .NET Core
+
+1. Types of responces
+What things we can return to client? the first thing is "specific type"  that we did before like get-all-books that returns a string.
+we should make a folder called models for view model classes that will be convert to entity in our project.
+this time we send request for api not just open them in browser, so use a client is a better option. postman is another good tool or thunder client. 
+ 
+
+
 # Intro to Databasse and PostgreSQL
 
 
