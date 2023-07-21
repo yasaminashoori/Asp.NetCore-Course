@@ -8,9 +8,10 @@ namespace migrate_to_asp_net.Controllers
     public class ValueController : ControllerBase
     {
         [Route("get-all-books")]
-        public string GetAll(int list, string listname)
+        public Customer GetAll(int list, string listname)
         {
-            return "Hello All Books: " + list + "name :" + listname;
+            // return "Hello All Books: " + list + "name :" + listname;
+            return new Customer() { Name = "Yas" };
         }
         [Route("get-book/{id}")]
         public string GetSingle(int id)

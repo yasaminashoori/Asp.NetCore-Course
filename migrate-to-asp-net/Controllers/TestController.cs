@@ -7,9 +7,15 @@ namespace migrate_to_asp_net.Controllers
     [Route("test/[action]")]
     public class TestController : ControllerBase
     {
-        public string Get()
+        [Route("{id}")]
+        public IActionResult Get()
         {
-            return "Hello From Get";
+            if (id == 0)
+            {
+                
+            }
+            // return "Hello From Get";
+            return Ok("Hello From Get");
         }
         public string Get1()
         {
