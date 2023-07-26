@@ -8,11 +8,11 @@ namespace migrate_to_asp_net.Controllers
     public class TestController : ControllerBase
     {
         [Route("{id}")]
-        public IActionResult Get()
+        public IActionResult Get(int id)
         {
             if (id == 0)
             {
-                
+                return NotFound();
             }
             // return "Hello From Get";
             return Ok("Hello From Get");
