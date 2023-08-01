@@ -44,6 +44,10 @@ namespace web_api.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateBook([FromBody]CreateBookDto model)
         {
+            // if (string.IsNullOrEmpty(model.Title))
+            // {
+            //     return BadRequest("لطفا عنوان کتاب را وارد کنید");
+            // }
             var id = await _booksRepository.CreateBook(model);
             return Ok(id);
         }
